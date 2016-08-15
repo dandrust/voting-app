@@ -1,0 +1,27 @@
+
+nav(class=['navbar', 'navbar-inverse navbar-fixed-top']) 
+    div.container-fluid
+        a.navbar-brand(href='/') Pollster
+        ul(class=['nav navbar-nav navbar-right'])
+            if user
+                li.dropdown
+                    a.dropdown-toggle(
+                        href='#'
+                        data-toggle='dropdown'
+                    )= user.name
+                        span.caret
+                            ul.dropdown-menu
+                                li 
+                                    a(href='dashboard') Dashboard
+                                li
+                                    a(href='createPoll') Create Poll
+                                li
+                                    a(href='logout') Logout
+            else
+                li 
+                    a(href='register') Register
+                li 
+                    a(href='login') Login
+                    
+            li  
+                a(href='createPoll') Create Poll

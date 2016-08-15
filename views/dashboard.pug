@@ -1,0 +1,22 @@
+doctype html
+html
+    head
+        title Dashboard - Pollster
+        include css.pug
+        
+    body
+        include navbar.pug
+        div.container-fluid
+            div.row
+                div.col-sm-12
+                    h1.text-center Dashboard
+            div(class=['row', 'poll-target'])
+                
+
+        include footer.pug
+        include js.pug
+        script(
+            src='js/displayUserPolls.js'
+            type='text/javascript'
+        )
+        

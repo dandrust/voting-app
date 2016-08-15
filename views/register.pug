@@ -1,0 +1,70 @@
+doctype html
+html
+    head
+        title Register - Pollster
+        include css.pug
+        
+    body
+        include navbar.pug
+        div.container-fluid
+            div.row
+                div(
+                    class=['col-md-4', 'col-md-offset-4', 'vcenter']
+                )
+                    h1.text-center Register
+                    br
+                    if message.length > 0
+                        div.poll-container
+                            p.text-center= message
+                        br
+                    form(
+                        name='register'
+                        action='register'
+                        method='post'
+                    )
+                        div.form-group
+                            label(for='name') Name:
+                            input(
+                               type='text'
+                                id='name'
+                                name='name'
+                                class='form-control'
+                            )
+                        //div.form-group
+                        //  label(for='email') Email:
+                        //    input(
+                        //        type='email'
+                        //        id='email'
+                        //        name='email'
+                        //        class='form-control'
+                        //    )
+                        div.form-group
+                            label(for='username') Username:
+                            input(
+                                type='text'
+                                id='username'
+                                name='username'
+                                class='form-control'
+                            )
+                        div.form-group
+                            label(for='password') Password:
+                            input(
+                                type='password'
+                                id='password'
+                                name='password'
+                                class='form-control'
+                            )
+                        div.form-group
+                            label(for='passwordConfirm') Confirm Password:
+                            input(
+                                type='password'
+                                id='passwordConfirm'
+                                name='passwordConfirm'
+                                class='form-control'
+                            )
+                        button(
+                            type='submit'
+                            class=['btn', 'btn-default', 'pull-right']) Register
+        include footer.pug
+        include js.pug
+        

@@ -1,0 +1,37 @@
+doctype html
+html
+    head
+        title Welcome - Pollster
+        include css.pug
+    body
+        include navbar.pug
+        div.container-fluid
+            div.row
+                div(class=['col-md-6', 'front-left'])
+                    div.text-center
+                        h1 Create Polls.
+                        h1 Share with Friends.
+                        h1 Know it all.
+                        br
+                        a( 
+                            href='createPoll'
+                            alt='Get Started')
+                            button(
+                                type='button'
+                                class=['btn', 'btn-default']) Get Started
+                div(class=['col-md-6', 'front-right', 'polls-target'])
+                    
+          
+                                    
+                        
+        include footer.pug    
+            
+        include js.pug
+        script(
+            src='js/displayPopularPolls.js'
+            type='text/javascript'
+        )
+        
+    
+    
+        

@@ -1,0 +1,98 @@
+doctype html
+html
+    head
+        title New Poll - Pollster
+        include css.pug
+        
+    body
+        include navbar.pug
+        div(class=['container-fluid', 'vcenter'])
+            h1.text-center Create New Poll
+            br
+            
+            div.row
+                form(
+                        name='createPoll'
+                        action='createPoll'
+                        method='post'
+                    )
+                    //div(
+                    //    class=['col-md-4', 'col-md-offset-2']
+                    //)
+                    
+                    
+                    //  div.form-group
+                    //        label(for='name') Name:
+                    //        input(
+                    //            type='text'
+                    //            name='name'
+                    //            id='name'
+                    //            class='form-control'
+                    //        )
+                    //    div.form-group
+                    //        label(for='description') Description:
+                    //        textarea(
+                    //            name='description'
+                    //            id='description'
+                    //            class='form-control'
+                    //        )
+                        
+                    div(class=['col-md-4', 'col-md-offset-4'])           
+                            div.form-group
+                                label(for='question') Polling Question:
+                                input(
+                                    type='text'
+                                    name='question'
+                                    id='question'
+                                    class='form-control'
+                                )
+                            div.options
+                                div.form-group
+                                    label Poll Responses:
+                                    input(
+                                        class='form-control'
+                                        type='text'
+                                        name='option1'
+                                        id='option1'
+                                    )
+                                div.form-group
+                                    input(
+                                        class='form-control'
+                                        type='text'
+                                        name='option2'
+                                        id='option2'
+                                    )
+                                div.form-group
+                                    input(
+                                        class='form-control'
+                                        type='text'
+                                        name='option3'
+                                        id='option3'
+                                    )
+                            div.form-group
+                                a(
+                                    href='#'
+                                    id='add-option') Add Another Response
+                            div.checkbox
+                                label 
+                                    input(
+                                        type='checkbox'
+                                        name='defineResponses'
+                                        value='true'
+                                        checked
+                                        ) 
+                                    | Allow users to add their own responses                            
+                            //input(
+                            //    type='hidden'
+                            //    name='username'
+                            //    value= username
+                            //)
+                            
+                            button(
+                                type='submit'
+                                class=['btn', 'btn-default', 'pull-right']) Create
+        include footer.pug
+        include js.pug
+        script(
+            src='js/addOption.js'
+            type='text/javascript')

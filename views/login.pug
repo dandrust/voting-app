@@ -1,0 +1,52 @@
+doctype html
+html
+    head
+        title Login - Pollster
+        include css.pug
+        
+    body
+        include navbar.pug
+        div.container-fluid
+            div.row
+                div(
+                    class=['col-md-4', 'col-md-offset-4', 'vcenter']
+                )
+                    div.text-center
+                        h1 Login
+                        br
+                        p Not a member? please #[a(href='register') Register] first.
+                        br
+                        
+                        if message.length > 0
+                            div.poll-container
+                                p.text-center= message
+                            br
+                        
+                    form(
+                        name='login'
+                        action='login'
+                        method='post'
+                    )
+                        div.form-group
+                            label(for='username') Username:
+                            input(
+                                type='text'
+                                id='username'
+                                name='username'
+                                class='form-control'
+                            )
+                        div.form-group
+                            label(for='password') Password:
+                            input(
+                                type='password'
+                                id='password'
+                                name='password'
+                                class='form-control'
+                            )
+                        button(
+                            type='submit'
+                            class=['btn', 'btn-default', 'pull-right']) Login
+        
+        include footer.pug
+        include js.pug
+        

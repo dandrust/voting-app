@@ -1,0 +1,61 @@
+body {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    background-color: #E06B04;
+}
+
+footer {
+    background: black;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar-nav>li>a, .navbar-brand {
+    color: white !important;
+}
+
+a {
+    color:white;
+}
+
+div {
+    color: white;
+    letter-spacing: 2px;
+    font-family: 'Righteous', cursive;
+}
+
+.block {
+    background-color: #04e06b;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 5px 5px 5px #555;
+    text-align: center;
+    border-radius: 2%;
+}
+
+.poll-container {
+    background-color: #04e06b;
+    padding: 30px;
+    //margin: 10px;
+    box-shadow: 5px 5px 5px #555;
+    text-align: left;
+    border-radius: 2%;
+}
+
+.block-title {
+    font-size: 30px;
+}
+
+.chart-container{
+    max-height: 50px;
+}
+
+.new {
+    background-color: rgba(255,255,255,.5);
+    border: 2px dashed white;
+}
+
+.modal-text{
+    color:black ;
+}
