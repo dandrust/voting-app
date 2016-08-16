@@ -24,7 +24,7 @@ module.exports = function(passport) {
                     return done(err);
                }
                
-               if (password  !== req.passwordConfirm) {
+               if (password  !== req.body.passwordConfirm) {
                    return done(null, false, req.flash( 'signupMessage', 'Passwords do not match'));
                }
                
