@@ -67,7 +67,6 @@ module.exports = function(app, passport) {
     });
 
     app.post('/poll', function(req, res) {
-        console.log(req.body);
         castVote(req.body, function(err, data) {
             if (err) throw err;
             res.redirect('/showResults?id=' + data.id);
